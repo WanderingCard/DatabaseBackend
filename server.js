@@ -4,10 +4,9 @@ import records from "./routes/record.js"
 // import cars from "./routes/car.js"
 // import customers from "./routes/customer.js"
 // import jobs from "./routes/job.js"
-// import makes from "./routes/make.js"
-// import models from "./routes/model.js"
 // import services from "./routes/service.js"
-// import technicans from "./routes/technican.js"
+// import technicians from "./routes/technican.js"
+// import visits from "../routes/visit.js"
 import test from "./routes/test.js"
 
 const PORT = process.env.PORT || 5050;
@@ -20,10 +19,9 @@ app.use("/test", test);
 // app.use("/cars", cars);
 // app.use("/customers", customers);
 // app.use("/jobs", jobs);
-// app.use("/makes", makes);
-// app.use("/models", models);
 // app.use("/services", services);
-// app.use("/technicans", technicans);
+// app.use("/technicians", technicians);
+// app.use("/visit", visits);
 
 
 app.listen(PORT, () => {
