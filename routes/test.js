@@ -8,7 +8,7 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
-let collection = await db.collection("IntegerationTest");
+let collection = await db.collection("IntegerationTest");       // Change
 
 router.get("/", async (req, res) => {
     // let collection = await db.collection("Test");
@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
     try {
         console.log(req.body)
-        let newDocument = {
+        let newDocument = {     // Change
             data:req.body['data'],
             array:req.body['array']
         };
@@ -48,8 +48,8 @@ router.post("/", async (req, res) => {
 router.patch("/:id", async (req, res) => {
     try {
         const query = {_id: new ObjectId(req.params.id) };
-        const updates = {
-            $set: {
+        const updates = { 
+            $set: { // Change
                 data: req.params.data
             },
         };
