@@ -33,7 +33,8 @@ router.post("/", async (req, res) => {
     try {
         console.log(req.body)
         let newDocument = {
-            data:req.body['data']
+            data:req.body['data'],
+            array:req.body['array']
         };
         // let collection = await db.collection("Test");
         let result = await collection.insertOne(newDocument);
