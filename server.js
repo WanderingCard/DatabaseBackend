@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import records from "./routes/record.js"
-// import cars from "./routes/car.js"
+import cars from "./routes/car.js"
 // import customers from "./routes/customer.js"
 // import jobs from "./routes/job.js"
 // import services from "./routes/service.js"
@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 // app.use("/record", records);
 // app.use("/test", test);
-// app.use("/cars", cars);
+app.use("/cars", cars);
 // app.use("/customers", customers);
 // app.use("/jobs", jobs);
 // app.use("/services", services);
