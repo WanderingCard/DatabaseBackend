@@ -34,7 +34,8 @@ router.post("/", async (req, res) => {
             fname:req.body['fname'],
             lname:req.body['lname'],
             address:req.body['address'],
-            phoneNumber:req.body['phoneNumber']
+            phoneNumber:req.body['phoneNumber'],
+            cars: req.body['cars'],
         };
         let result = await collection.insertOne(newDocument);
         res.send(result).status(204);
@@ -52,7 +53,8 @@ router.patch("/:id", async (req, res) => {
                 fname: req.body['fname'],
                 lname: req.body['lname'],
                 address: req.body['address'],
-                phoneNumber: req.body['phoneNumber']
+                phoneNumber: req.body['phoneNumber'],
+                cars: req.body['cars']
             },
         };
         let results = await collection.updateOne(query, updates);
