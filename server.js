@@ -7,7 +7,7 @@ import customers from "./routes/customer.js"
 // import makes from "./routes/make.js"
 // import models from "./routes/model.js"
 // import services from "./routes/service.js"
-import technicians from "./routes/technican.js"
+import technicians from "./routes/technician.js"
 // import visits from "../routes/visit.js"
 // import test from "./routes/test.js"
 
