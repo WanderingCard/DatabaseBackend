@@ -7,8 +7,9 @@ import customers from "./routes/customer.js"
 // import makes from "./routes/make.js"
 // import models from "./routes/model.js"
 // import services from "./routes/service.js"
-// import technicans from "./routes/technican.js"
-import test from "./routes/test.js"
+import technicians from "./routes/technican.js"
+// import visits from "../routes/visit.js"
+// import test from "./routes/test.js"
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -23,7 +24,8 @@ app.use("/customers", customers);
 // app.use("/makes", makes);
 // app.use("/models", models);
 // app.use("/services", services);
-// app.use("/technicans", technicans);
+app.use("/technicians", technicians);
+// app.use("/visit", visits);
 
 
 app.listen(PORT, () => {
