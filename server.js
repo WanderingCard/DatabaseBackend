@@ -5,7 +5,7 @@ import cars from "./routes/car.js"
 // import customers from "./routes/customer.js"
 // import jobs from "./routes/job.js"
 // import services from "./routes/service.js"
-// import technicians from "./routes/technican.js"
+import technicians from "./routes/technician.js"
 // import visits from "../routes/visit.js"
 // import test from "./routes/test.js"
 
@@ -20,7 +20,7 @@ app.use("/cars", cars);
 // app.use("/customers", customers);
 // app.use("/jobs", jobs);
 // app.use("/services", services);
-// app.use("/technicians", technicians);
+app.use("/technicians", technicians);
 // app.use("/visit", visits);
 
 
