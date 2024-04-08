@@ -31,9 +31,10 @@ router.post("/", async (req, res) => {
     try {
         console.log(req.body)
         let newDocument = {     // Change
-            customer: req.body['customer_id'],
-            date: req.body['dateTime'],
-            job: req.body['job_id']
+            car: req.body['car_id'],
+            service: req.body['service_id'],
+            technician: req.body['technician_id'],
+            status: req.body['status']
         };
         let result = await collection.insertOne(newDocument);
         res.send(result).status(204);
@@ -48,9 +49,10 @@ router.patch("/:id", async (req, res) => {
         const query = {_id: new ObjectId(req.params.id) };
         const updates = { 
             $set: { // Change
-                customer: req.body['customer_id'],
-                date: req.body['dateTime'],
-                job: req.body['job_id']
+                car: req.body['car_id'],
+                service: req.body['service_id'],
+                technician: req.body['technician_id'],
+                status: req.body['status']
             },
         };
         let results = await collection.updateOne(query, updates);
