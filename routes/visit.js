@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
     try {
         console.log(req.body)
         let newDocument = {     // Change
-            customer: req.body['customer_id'],
+            customer: req.body['customer_id'],,
             job: req.body['job_id'],
             date: req.body['datetime']
         };
