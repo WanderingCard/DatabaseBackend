@@ -26,6 +26,7 @@ router.post("/", async (req, res) => {
         console.log(req.body)
         let newDocument = {
             customer: req.body.customer_id,
+            car: req.body.car_id,
             date: req.body.date,
             job: req.body.job
         };
@@ -43,6 +44,7 @@ router.patch("/:id", async (req, res) => {
         const updates = { 
             $set: {
                 customer: req.body.customer_id,
+                car: req.body.car_id,
                 date: req.body.date,
                 job: req.body.job
             },
