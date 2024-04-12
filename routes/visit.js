@@ -25,7 +25,6 @@ router.post("/", async (req, res) => {
     try {
         console.log(req.body)
         let newDocument = {
-            _id: req.body._id,
             customer: req.body.customer_id,
             date: req.body.date,
             job: req.body.job
