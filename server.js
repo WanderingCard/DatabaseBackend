@@ -8,7 +8,7 @@ import jobs from "./routes/job.js"
 // import models from "./routes/model.js"
 import services from "./routes/service.js"
 import technicians from "./routes/technician.js"
-// import visits from "../routes/visit.js"
+ import visits from "../routes/visit.js"
 // import test from "./routes/test.js"
 
 const PORT = process.env.PORT || 5050;
@@ -25,7 +25,7 @@ app.use("/jobs", jobs);
 // app.use("/models", models);
 app.use("/services", services);
 app.use("/technicians", technicians);
-// app.use("/visit", visits);
+app.use("/visit", visits);
 
 
 app.listen(PORT, () => {
