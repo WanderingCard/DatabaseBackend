@@ -58,7 +58,7 @@ router.patch("/:id", async (req, res) => {
             },
         };
         let results = await collection.updateOne(query, updates);
-        res.send(result).status(200);
+        res.send(results).status(200);
     } catch (err) {
         console.error(err);
         res.status(500).send("Error updating records");
